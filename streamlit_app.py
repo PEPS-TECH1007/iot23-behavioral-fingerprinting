@@ -9,28 +9,22 @@ from pathlib import Path
 # PATHS
 # ============================================================
 
-BASE_DIR = Path(r"C:\Charan\IOT 23 attack detection project")
+BASE_DIR = Path(__file__).resolve().parent
 
 # -------------------- RANDOM FOREST --------------------------
 
 RF_MODEL_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step6_rf_ready"
     / "final_rf_16_devices_60s_2000trees.joblib"
 )
 
 RF_SCHEMA_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step6_rf_ready"
     / "rf_feature_schema.json"
 )
 
 DATA_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step6_rf_ready"
     / "rf_ready_16_devices_fixed.parquet"
 )
 
@@ -38,25 +32,18 @@ DATA_PATH = (
 
 XGB_MODEL_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step7_xgb"
     / "final_xgb_5class_60s_1500trees.joblib"
 )
 
 XGB_SCHEMA_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step7_xgb"
     / "xgb_feature_schema.json"
 )
 
 XGB_MAPPING_PATH = (
     BASE_DIR
-    / "outputs"
-    / "step7_xgb"
     / "xgb_class_mapping.json"
 )
-
 
 # ============================================================
 # LOAD MODELS / DATA
